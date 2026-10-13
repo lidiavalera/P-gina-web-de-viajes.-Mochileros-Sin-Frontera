@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mochileros Sin Fronteras</title>
+    <link rel="stylesheet" href="./style/VariablesColores.css">
+    <link rel="stylesheet" href="./style/InicioSesion_y_registro.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/general.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <img class="header-imagen" src="images/logo.png" alt="logo-web">
+        <img class="header-imagen-daltonico" src="images/logo_daltonismo.png" alt="logo-web-daltonico">
+
+        <h2><a href="Home.html" data-i18n="inicio"> Inicio </a></h2>
+        <h2><a href="GaleriaDestinos.html" data-i18n="destinos"> Destinos </a></h2>
+        <h2><a id="link-consejos" href="consejos.html" data-i18n="consejos"> Consejos </a></h2>
+        <h2><a id="link-perfil" href="PerfilUsuario.html" data-i18n="perfil"> Perfil </a></h2>
+        <h2><a href="#" data-i18n="contacto"> Contacto </a></h2>
+
+        <div id="header-auth" class="grupo-botones">
+            <button class="boton-reg" type="button" data-i18n="iniciosesion">Inicio sesion</button>
+            <button class="boton-ini" type="button" data-i18n="registro">Registro</button>
+        </div>
+
+        <div class="grupo-selectores">
+            <label for="moneda" class="sr-only">Selecciona moneda</label>
+            <select class="header-moneda" name="moneda" id="moneda">
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+                <option value="YEN">YEN</option>
+            </select>
+
+            <label for="idioma" class="sr-only">Selecciona idioma</label>
+            <select class="header-idioma" name="idioma" id="idioma">
+                <option value="es" data-i18n="español">Español</option>
+                <option value="en" data-i18n="ingles">Inglés</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="login">
+        <div class="login-tarjeta">
+            <form class="login-form">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="registro-input" name="nombre" id="nombre" placeholder="Usuario">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" class="registro-input" name="apellidos" id="apellidos" placeholder="Apellidos">
+                <label for="nombre_usuario">Nombre de usuario</label>
+                <input type="text" class="registro-input" name="nombre_usuario" id="nombre_usuario"
+                    placeholder="Nombre de usuario">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" class="registro-input" name="contrasena" id="contrasena"
+                    placeholder="Contraseña">
+                <label for="foto">Foto de perfil</label>
+                <input type="file" accept="image/*" class="registro-input" id="foto">
+
+                <button type="submit" class="btn-signin">Sign In</button>
+
+                <a href="#" class="forgot-password">Forgot password?</a>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-redes">
+            <a href="https://www.instagram.com/" target="_blank"><img class="logo-redes"
+                    src="./images/instagram-logo.png" alt="logo instagram"></a>
+            <a href="https://www.tiktok.com/es/" target="_blank"><img class="logo-redes" src="./images/tiktok-logo.png"
+                    alt="logo tiktok"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img class="logo-redes" src="./images/youtube-logo.png"
+                    alt="logo youtube"></a>
+        </div>
+
+        <h3><a href="" data-i18n="politica"> Politica de Privacidad </a></h3>
+        <h3><a href="" data-i18n="nosotros"> Sobre nosotros </a></h3>
+        <h3><a href="" data-i18n="ayuda"> Ayuda </a></h3>
+    </footer>
+    <script type="module" src="./script/auth.js"></script>
+    <script type="module" src="./script/alerta_inicio_registro.js"></script>
+    <script src="./script/temaGlobal.js"></script>
+</body>
+
+</html>
